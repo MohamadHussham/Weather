@@ -1,0 +1,149 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --accent: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #020617, #020617);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  letter-spacing: 1px;
+}
+
+.app {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+section {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+}
+
+input {
+  width: 100%;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #020617;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* WEATHER */
+#weatherResult p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+/* MOVIES */
+#movieResults {
+  display: grid;
+  gap: 10px;
+}
+
+.movie {
+  background: #020617;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie strong {
+  font-size: 0.95rem;
+}
+
+.movie span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* TODO */
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todoList li {
+  background: #020617;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#todoList li:hover {
+  background: #020617dd;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
