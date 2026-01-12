@@ -147,3 +147,9 @@ button:hover {
   text-decoration: line-through;
   color: var(--muted);
 }
+@media screen(max-width: 600px) {   
+  .app {
+    grid-template-columns: 1fr;
+  }
+  
+}
